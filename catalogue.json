@@ -7,9 +7,17 @@
   "tags": "台灣50 市值 台股",
   "url": "https://www.yuantaetfs.com/product/domestic?lang=zh-tw",
   "perf": {
-   "asOf": "",
-   "source": "待補：發行公司月報",
-   "returns": {}
+   "asOf": "2026/08/31",
+   "source": "元大投信基金月報（理柏資訊、投信投顧公會、元大投信，原幣計算）",
+   "url": "https://www.yuantafunds.com/fund/download/1066%E5%85%83%E5%A4%A7%E5%8F%B0%E7%81%A3%E5%8D%93%E8%B6%8A50%E5%9F%BA%E9%87%91%E6%9C%88%E5%A0%B1.pdf",
+   "inception": "2003/06/25",
+   "returns": {
+    "1": 108.23,
+    "2": 145.61,
+    "3": 264.34,
+    "5": 247.39,
+    "since": 2292.0
+   }
   }
  },
  {

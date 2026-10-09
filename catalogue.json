@@ -52,9 +52,17 @@
   "tags": "高股息 台股",
   "url": "https://www.yuantaetfs.com/product/domestic?lang=zh-tw",
   "perf": {
-   "asOf": "",
-   "source": "待補：發行公司月報",
-   "returns": {}
+   "asOf": "2026/08/31",
+   "source": "元大投信基金月報（理柏資訊、投信投顧公會、元大投信，原幣計算）",
+   "url": "https://www.yuantafunds.com/fund/download/1084%E5%85%83%E5%A4%A7%E5%8F%B0%E7%81%A3%E9%AB%98%E8%82%A1%E6%81%AF%E5%9F%BA%E9%87%91%E6%9C%88%E5%A0%B1.pdf",
+   "inception": "2007/12/13",
+   "returns": {
+    "1": 72.74,
+    "2": 73.49,
+    "3": 111.88,
+    "5": 166.53,
+    "since": 565.8
+   }
   }
  },
  {

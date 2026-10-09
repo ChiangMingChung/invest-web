@@ -55,4 +55,16 @@ for(const [frequency,months] of [['annual',12],['semiannual',6],['quarterly',3],
 elements.frequency.value='monthly'; elements['timing-scheme'].value='1'; elements.delay.value='25'; run('render()');
 assert.equal(elements['late-value'].textContent,'0 元');
 assert.equal(run('searchCatalogue("0050")[0].code'),'0050');
-console.log('PASS: principal, blank/zero rates, highest/ties, 4 frequencies, quick, delay, catalogue.');
+assert.ok(Math.abs(run('annualized(100,2)')-41.4213562)<1e-6);
+assert.ok(Math.abs(run('annualized(-50,1)')+50)<1e-9);
+const fund=run('searchCatalogue("統一奔騰")[0]');
+assert.equal(fund.perf.returns[5],503.34);
+const fundRows=run('perfRows(searchCatalogue("統一奔騰")[0])');
+assert.equal(fundRows.map(r=>r.years).join(),"1,2,3,5");
+assert.ok(Math.abs(fundRows[3].annual-43.3)<0.1);
+const detail=run('perfDetail(1,searchCatalogue("安聯台灣科技")[0])');
+assert.ok(detail.includes('超出 100% 上限'));
+assert.ok(detail.includes('data-rate="69.40"'));
+assert.equal(run('perfRows(searchCatalogue("0050")[0]).length'),0);
+assert.ok(run('perfDetail(0,searchCatalogue("0050")[0])').includes('待補'));
+console.log('PASS: principal, blank/zero rates, highest/ties, 4 frequencies, quick, delay, catalogue, annualized returns.');

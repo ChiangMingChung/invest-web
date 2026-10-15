@@ -84,6 +84,11 @@ assert.equal((elements['g-rows'].innerHTML.match(/<tr>/g)||[]).length,20);
 elements['g-years'].value=''; run('renderGrowth()');
 assert.equal(elements['g-value'].textContent,'—');
 assert.ok(elements['g-error'].textContent.length>0);
+const ig=run('searchCatalogue("LU0820561818")[0]');
+assert.equal(ig.perf.returns.since,179.3);
+assert.ok(Math.abs(run('perfLongTerm(searchCatalogue("LU0820561818")[0])').annual-7.67)<0.05);
+assert.ok(run('perfDetail(0,searchCatalogue("LU0820561818")[0])').includes('0.055 美元'));
+assert.equal(run('perfDividend(searchCatalogue("TW000T3635H2")[0])'),'');
 // monthly dividend mode (lump sum)
 const sim=(p,y,nav,yp,re)=>run('dividendSim('+[p,y,nav,yp,re].join(',')+')');
 assert.ok(Math.abs(sim(1000000,20,8,0,false).values[20]-1000000*Math.pow(1.08,20))<1e-4);

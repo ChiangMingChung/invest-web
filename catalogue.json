@@ -285,35 +285,107 @@
   "kind": "基金"
  },
  {
-  "code": "",
+  "code": "LU0820561818",
   "name": "安聯收益成長基金 AM穩定月收類股（美元）",
   "currency": "USD",
   "url": "https://tw.allianzgi.com/home/products-solutions/luxemberg/allianz-income-and-growth-am-usd?CGC=19A6DU5BGX",
   "tags": "Allianz 月配息 股債 非投資等級 配息來源可能為本金",
-  "kind": "基金"
+  "kind": "基金",
+  "perf": {
+   "asOf": "2026/09/30",
+   "source": "安聯投信官網（Lipper，含息、原幣計算）",
+   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-am-usd?nav=performance",
+   "inception": "2012/10/16",
+   "returns": {
+    "1": 7.06,
+    "2": 17.83,
+    "3": 38.2,
+    "since": 179.3
+   },
+   "dividend": {
+    "exDate": "2026/09/15",
+    "amount": 0.055,
+    "currency": "美元",
+    "rate": 0.65,
+    "frequency": "每月",
+    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-am-usd?nav=dividend"
+   }
+  }
  },
  {
-  "code": "",
+  "code": "LU2023250330",
   "name": "安聯收益成長基金 AMg7月收總收益類股（美元）",
   "currency": "USD",
   "url": "https://tw.allianzgi.com/zh-tw/home/products-solutions/luxemberg/allianz-income-and-growth-amg7-usd?nav=overview",
   "tags": "Allianz 月配息 非投資等級 配息來源可能為本金",
-  "kind": "基金"
+  "kind": "基金",
+  "perf": {
+   "asOf": "2026/09/30",
+   "source": "安聯投信官網（Lipper，含息、原幣計算）",
+   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-amg7-usd?nav=performance",
+   "inception": "2020/02/03",
+   "returns": {
+    "1": 7.06,
+    "2": 17.83,
+    "3": 37.86,
+    "since": 61.7
+   },
+   "dividend": {
+    "exDate": "2026/09/15",
+    "amount": 0.06796,
+    "currency": "美元",
+    "rate": 0.79,
+    "frequency": "每月",
+    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-amg7-usd?nav=dividend"
+   }
+  }
  },
  {
-  "code": "",
+  "code": "LU1366192091",
   "name": "安聯AI收益成長基金 AM穩定月收類股（美元）",
   "currency": "USD",
   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-ai-income-am-usd",
   "tags": "Allianz 人工智慧 月配息 非投資等級 配息來源可能為本金",
-  "kind": "基金"
+  "kind": "基金",
+  "perf": {
+   "asOf": "2026/09/30",
+   "source": "安聯投信官網（Lipper，含息、原幣計算）",
+   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-ai-income-am-usd?nav=performance",
+   "inception": "2016/04/05",
+   "returns": {
+    "1": 22.98,
+    "2": 46.63,
+    "3": 87.04,
+    "since": 312.31
+   },
+   "dividend": {
+    "exDate": "2026/09/15",
+    "amount": 0.14619,
+    "currency": "美元",
+    "rate": 0.57,
+    "frequency": "每月",
+    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-ai-income-am-usd?nav=dividend"
+   }
+  }
  },
  {
-  "code": "",
+  "code": "TW000T3635H2",
   "name": "安聯收益成長多重資產基金 A類型（累積）美元",
   "currency": "USD",
   "url": "https://tw.allianzgi.com/zh-tw/home/products-solutions/taiwan-onshore/allianz-global-investors-income-and-growth-fund-a-usd?nav=overview",
   "tags": "Allianz 境內 累積 股債 非投資等級",
-  "kind": "基金"
+  "kind": "基金",
+  "perf": {
+   "asOf": "2026/09/30",
+   "source": "安聯投信官網（Lipper，含息、原幣計算）",
+   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-income-and-growth-fund-a-usd?nav=performance",
+   "inception": "2020/01/03",
+   "returns": {
+    "1": 8.56,
+    "2": 18.89,
+    "3": 38.64,
+    "since": 59.08
+   }
+  }
  }
 ]

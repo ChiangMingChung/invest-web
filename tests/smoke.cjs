@@ -73,4 +73,15 @@ assert.equal(run('perfLongTerm(searchCatalogue("00878")[0])'),null);
 assert.ok(Math.abs(run('perfLongTerm(searchCatalogue("0050")[0])').annual-14.67)<0.05);
 assert.equal(run('perfRows(searchCatalogue("00878")[0]).length'),0);
 assert.ok(run('perfDetail(0,searchCatalogue("00878")[0])').includes('待補'));
-console.log('PASS: principal, blank/zero rates, highest/ties, 4 frequencies, quick, delay, catalogue, long-term average returns.');
+assert.equal(run('growthSeries(10000,20,0)[20]'),2400000);
+function growthReference(m,y,rate){const g=Math.pow(1+rate/100,1/12)-1;let v=0;for(let k=0;k<y*12;k++)v=v*(1+g)+m;return v}
+for(const rate of [8,-5,30])assert.ok(Math.abs(run('growthSeries(10000,20,'+rate+')[20]')-growthReference(10000,20,rate))<1e-4);
+assert.ok(Math.abs(run('growthSeries(1000,1,12)[1]')-growthReference(1000,1,12))<1e-9);
+elements['g-monthly'].value='10000'; elements['g-rate'].value='8'; elements['g-years'].value='20'; run('renderGrowth()');
+assert.equal(elements['g-capital'].textContent,'2,400,000 元');
+assert.equal(elements['g-value'].textContent,run('fmt(growthSeries(10000,20,8)[20])'));
+assert.equal((elements['g-rows'].innerHTML.match(/<tr>/g)||[]).length,20);
+elements['g-years'].value=''; run('renderGrowth()');
+assert.equal(elements['g-value'].textContent,'—');
+assert.ok(elements['g-error'].textContent.length>0);
+console.log('PASS: principal, blank/zero rates, highest/ties, 4 frequencies, quick, delay, catalogue, long-term average returns, growth page.');

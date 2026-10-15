@@ -1,5 +1,8 @@
 # 夢想實現計畫
 
+- 網站：https://chiangmingchung.github.io/invest-web/
+- 團隊使用說明：https://chiangmingchung.github.io/invest-web/guide.html
+
 可獨立使用的繁體中文投資情境比較工具。純 HTML、CSS、JavaScript；沒有建置步驟、套件依賴、資料庫或後端。
 
 ## 專案內容

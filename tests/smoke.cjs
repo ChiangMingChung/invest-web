@@ -19,7 +19,7 @@ const document = {
 const context = vm.createContext({document,window:{addEventListener(){}},location:{hash:''}});
 const run = code => vm.runInContext(code,context);
 run(script);
-assert.equal(elements.total.textContent,'2,400,000 元');
+assert.equal(elements.total.textContent,'NT$ 2,400,000');
 assert.equal(elements.value0.textContent,'—');
 elements.rate0.value='2'; elements.rate1.value='6'; elements.rate2.value='10';
 run('render()');
@@ -53,7 +53,7 @@ for(const [frequency,months] of [['annual',12],['semiannual',6],['quarterly',3],
  assert.equal(elements['quick-value'].textContent,run('fmt(calculateFinal(0,10000,20,10,"compound","'+frequency+'"))'));
 }
 elements.frequency.value='monthly'; elements['timing-scheme'].value='1'; elements.delay.value='25'; run('render()');
-assert.equal(elements['late-value'].textContent,'0 元');
+assert.equal(elements['late-value'].textContent,'NT$ 0');
 assert.equal(run('searchCatalogue("0050")[0].code'),'0050');
 assert.ok(Math.abs(run('annualized(100,2)')-41.4213562)<1e-6);
 assert.ok(Math.abs(run('annualized(-50,1)')+50)<1e-9);
@@ -78,7 +78,7 @@ function growthReference(m,y,rate){const g=Math.pow(1+rate/100,1/12)-1;let v=0;f
 for(const rate of [8,-5,30])assert.ok(Math.abs(run('growthSeries(10000,20,'+rate+')[20]')-growthReference(10000,20,rate))<1e-4);
 assert.ok(Math.abs(run('growthSeries(1000,1,12)[1]')-growthReference(1000,1,12))<1e-9);
 elements['g-monthly'].value='10000'; elements['g-rate'].value='8'; elements['g-years'].value='20'; run('renderGrowth()');
-assert.equal(elements['g-capital'].textContent,'2,400,000 元');
+assert.equal(elements['g-capital'].textContent,'NT$ 2,400,000');
 assert.equal(elements['g-value'].textContent,run('fmt(growthSeries(10000,20,8)[20])'));
 assert.equal((elements['g-rows'].innerHTML.match(/<tr>/g)||[]).length,20);
 elements['g-years'].value=''; run('renderGrowth()');

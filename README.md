@@ -7,6 +7,7 @@
 - 完整網站程式：`index.html`（頁面、樣式、計算和事件均在同一檔）。
 - 網站圖示：`favicon.svg`。
 - ETF／基金參考名錄：`catalogue.json`。
+- 團隊使用說明：`guide.html`（網址加上 /guide.html，未放在網站選單）。
 - 程式架構：`docs/ARCHITECTURE.md`。
 - GitHub 上傳與發布說明：`docs/GITHUB.md`。
 - 開發筆記和現有限制：`docs/HANDOFF.md`。

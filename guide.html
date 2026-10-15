@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script><title>夢想實現計畫｜團隊使用說明</title><link rel="icon" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#f6f2ea;--paper:#fffdf8;--fill:#f4eee2;--line:#e6ddcc;--line-2:#d6cab3;--text:#1c242c;--muted:#6b6458;--ink:#121c26;--gold:#a8864f;--gold-deep:#86672f;--warn:#b5523b;--serif:"Noto Serif TC","Songti TC","PMingLiU",serif;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0c0c0e;--paper:#151517;--fill:#1c1b19;--line:#27251f;--line-2:#3a352b;--text:#e9e2d3;--muted:#a39a8a;--ink:#f3ebda;--gold:#c9a45c;--gold-deep:#d8b874;--warn:#e07a5f;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.8;font-size:16px}
+[data-theme="dark"] body{background:radial-gradient(1100px 520px at 78% -8%,#1d1a14 0%,transparent 62%),#0c0c0e}
+header{padding:22px max(20px,calc((100vw - 880px)/2));border-bottom:1px solid var(--gold);background:#08080a;color:#f3ead8;display:flex;justify-content:space-between;align-items:center;gap:12px}
+[data-theme="light"] header{background:#121c26}
+header b{font-family:var(--serif);font-size:20px;letter-spacing:.16em;font-weight:600}
+header a{color:#e6d3a3;font-size:14px;text-decoration:none;border:1px solid #a8864f80;border-radius:999px;padding:6px 14px;white-space:nowrap}
+main{max-width:880px;margin:auto;padding:32px 20px 64px}
+h1{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink);letter-spacing:.06em;margin:0 0 6px}
+.lead{color:var(--muted);margin:0 0 26px}
+h2{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);letter-spacing:.06em;margin:44px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+h2 .num{color:var(--gold-deep);margin-right:10px}
+h3{font-size:16px;color:var(--gold-deep);margin:22px 0 6px;letter-spacing:.04em}
+p{margin:8px 0}
+a{color:var(--gold-deep)}
+ol,ul{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px 22px}
+.toc b{display:block;font-family:var(--serif);color:var(--ink);margin-bottom:6px}
+.toc ol{columns:2;column-gap:28px;margin:0}
+.box{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:14px 18px;margin:14px 0}
+.box.warn{border-left-color:var(--warn)}
+.box b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;border-bottom-color:var(--line-2);white-space:nowrap}
+td:first-child{font-family:var(--serif);font-weight:600;color:var(--gold-deep);white-space:nowrap}
+.flow{counter-reset:s;list-style:none;padding:0}
+.flow li{counter-increment:s;position:relative;padding:12px 14px 12px 54px;margin:8px 0;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+.flow li:before{content:counter(s);position:absolute;left:14px;top:12px;width:28px;height:28px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);color:var(--gold-deep);font-weight:600;line-height:1}
+.flow li b{color:var(--ink)}
+kbd{font-family:inherit;font-size:14px;padding:1px 8px;border:1px solid var(--line-2);border-radius:4px;background:var(--fill);white-space:nowrap}
+footer{margin-top:48px;color:var(--muted);font-size:13px}
+@media(max-width:640px){h1{font-size:25px}.toc ol{columns:1}header b{font-size:17px}table{font-size:14px}td:first-child{white-space:normal}}
+</style></head><body>
+<header><b>夢想實現計畫</b><a href="./">開啟網站 →</a></header>
+<main>
+<h1>團隊使用說明</h1>
+<p class="lead">業務端會談輔助工具。網址：<a href="./">chiangmingchung.github.io/invest-web</a>　版本：2026/10/16</p>
+
+<nav class="toc"><b>目錄</b><ol>
+<li><a href="#open">開啟與安裝</a></li>
+<li><a href="#nav">畫面操作</a></li>
+<li><a href="#life">01 人生曲線圖</a></li>
+<li><a href="#inflation">02 通膨怎麼來</a></li>
+<li><a href="#scenarios">03 資金報酬情境</a></li>
+<li><a href="#targets">04 ETF／基金比較</a></li>
+<li><a href="#growth">05 本利和／月配息</a></li>
+<li><a href="#flow">建議會談流程</a></li>
+<li><a href="#rules">使用注意事項</a></li>
+<li><a href="#faq">常見問題</a></li>
+</ol></nav>
+
+<h2 id="open">開啟與安裝</h2>
+<p>網站 24 小時都能開啟，電腦、手機、平板都能用，不需要帳號或安裝軟體。</p>
+<table><thead><tr><th>裝置</th><th>建議做法</th></tr></thead><tbody>
+<tr><td>iPhone／iPad</td><td>用 Safari 開啟網址 → 點下方 <kbd>分享</kbd> → <kbd>加入主畫面</kbd>，之後從主畫面圖示開啟，畫面就像 App。</td></tr>
+<tr><td>Android</td><td>用 Chrome 開啟網址 → 右上 <kbd>⋮</kbd> → <kbd>加到主畫面</kbd>。</td></tr>
+<tr><td>電腦</td><td>用 Chrome 或 Edge 開啟，建議加入書籤；會談時可按 <kbd>F11</kbd> 全螢幕。</td></tr>
+</tbody></table>
+<div class="box"><b>平板建議橫放使用。</b>橫放時左邊填資料、右邊看結果，兩邊各自捲動，最適合跟客戶一起操作。</div>
+
+<h2 id="nav">畫面操作</h2>
+<ul>
+<li><b>開場動畫</b>：每次開啟會播放約 3 秒，點一下畫面即可跳過。</li>
+<li><b>切換頁面</b>：電腦與平板橫放用左側選單；手機點右上角的 <kbd>選單 ☰</kbd>。</li>
+<li><b>深色／淺色</b>：電腦在右上角切換，手機在選單最下方；網站會記住選擇。</li>
+<li><b>即時計算</b>：修改任何數字，結果與曲線會立刻更新，不需要按送出。</li>
+<li><b>看細節</b>：滑鼠移到曲線上可看每一年的數字；手機可直接看曲線下方的數字框，或點開「逐年明細」。「計算方式」點開可看公式。</li>
+<li><b>隱私</b>：所有計算都在自己的裝置上完成，輸入的數字不會上傳，重新整理後就清空。</li>
+</ul>
+
+<h2 id="life">01 人生曲線圖（首頁）</h2>
+<p>用一條曲線呈現客戶從現在、退休到晚年的資產變化，以及每個夢想在哪個年紀實現。</p>
+<h3>要填的資料</h3>
+<table><thead><tr><th>區塊</th><th>內容</th></tr></thead><tbody>
+<tr><td>人生階段</td><td>目前年齡、退休年齡、規劃到幾歲、通膨率（預設 2%）</td></tr>
+<tr><td>累積期</td><td>目前已有資產、退休前每月投入、退休前平均年報酬率</td></tr>
+<tr><td>退休期</td><td>退休後平均年報酬率、每月其他收入（勞保、勞退等）</td></tr>
+<tr><td>食</td><td>每日餐費 × 30 天 × 12 個月 × 退休年數</td></tr>
+<tr><td>衣・生活</td><td>每月生活費 × 12 個月 × 退休年數</td></tr>
+<tr><td>住</td><td>租房：每月房租 × 12 × 退休年數；買房：房價與購屋年齡；或「已有自宅」不另計</td></tr>
+<tr><td>行</td><td>(第一台車 ＋ 最後一台車) ÷ 2 × 台數；預設每 10 年換一台，從退休那年開始</td></tr>
+<tr><td>育</td><td>小孩花費合計與花費年齡</td></tr>
+<tr><td>樂</td><td>(每年歐洲次數 × 每次費用 ＋ 亞洲次數 × 每次費用) × 旅遊年數；歐洲約 10 萬、亞洲約 4～5 萬，從退休開始到設定年齡</td></tr>
+<tr><td>其他夢想</td><td>子女婚禮、創業、捐贈等，可新增最多 8 個</td></tr>
+</tbody></table>
+<p>所有金額都以<b>今天的物價</b>填寫，系統會依通膨率換算到實際發生的年份。</p>
+<h3>怎麼看結果</h3>
+<ul>
+<li><b>資產夠用</b>：最上方顯示「規劃到 90 歲，資產仍有 NT$ …」。</li>
+<li><b>資產不夠</b>：顯示「資產可支撐到 ○○ 歲」，曲線從用完那刻起變紅，並算出「要撐到 90 歲，每月需投入約 NT$ …」。</li>
+<li><b>人生需求總覽</b>：列出食衣住行育樂每一項的算式與金額，以及總需求，方便跟客戶逐項核對。</li>
+<li><b>曲線上的標記</b>：金色圓點是夢想或換車的時間點；淺色底的區段是退休期。</li>
+</ul>
+<div class="box"><b>會談技巧：</b>讓客戶自己填餐費、房租、旅遊次數，比我們幫他假設更有參與感，對結果也更有共識。</div>
+
+<h2 id="inflation">02 通膨怎麼來</h2>
+<p>向客戶說明為什麼退休規劃一定要考慮通膨。</p>
+<ul>
+<li><b>通膨計算機</b>：輸入金額、年數、通膨率，算出未來要花多少錢才買得到同樣的東西，以及購買力剩多少。</li>
+<li><b>台灣實際數據</b>：2022～2025 年的 CPI 年增率（行政院主計總處），點一下就能帶入計算。</li>
+<li><b>說明內容</b>：通膨是什麼、怎麼量出來、為什麼會漲，以及便當、生活費、旅遊的未來價格例子。</li>
+<li><b>套用到人生曲線圖</b>：把這裡的通膨率帶回首頁重新計算。</li>
+</ul>
+
+<h2 id="scenarios">03 資金報酬情境</h2>
+<p>同樣的本金，放在不同報酬率的地方，期末差多少。</p>
+<ol>
+<li>選擇 <kbd>定期定額</kbd> 或 <kbd>單筆投入</kbd>，填金額與年數。</li>
+<li>在方案 A、B、C 填名稱與平均年利率（例如：銀行存款 2%、ETF 6%、基金 8%）。</li>
+<li>看每個方案的期末本利合、成長曲線與最高最低差距。</li>
+<li>下方「現在開始與晚開始」可以比較晚 5 年開始投資，會少多少。</li>
+</ol>
+
+<h2 id="targets">04 ETF／基金比較</h2>
+<ol>
+<li>展開「ETF／基金標的總覽與搜尋」，或直接在方案名稱輸入代碼或關鍵字（例如 0050、安聯、科技）。</li>
+<li>選擇標的後，會顯示發行公司公布的<b>成立以來長期平均年報酬</b>，按 <kbd>帶入平均年利率</kbd> 就會套用到該方案。</li>
+<li>近 1／2／3／5 年報酬只列為參考，波動大，不建議當作長期假設。</li>
+<li>月配息標的會另外顯示最近一次配息與當期配息率。</li>
+</ol>
+<p>目前收錄 28 筆標的，資料每月更新一次（目前為 2026/09/30）；國泰 00878 的績效尚待補上。</p>
+
+<h2 id="growth">05 本利和／月配息</h2>
+<h3>只賺價差（定期定額）</h3>
+<p>適合不配息、靠價格成長的標的。填每月投入、平均年報酬率、年數，算出期末本利和、價差收益與逐年明細。</p>
+<h3>有月配息（單筆投入）</h3>
+<ul>
+<li>預設帶入<b>安聯收益成長 AM 穩定月收類股</b>的官方資料：當期配息率 × 12 估算年化配息率，並由成立以來含息報酬反推淨值變化。也可以改選其他標的或自行填寫。</li>
+<li>填單筆投入金額、年數，選擇配息「領出現金」或「滾入再投入」。</li>
+<li>結果會顯示<b>第 1 個月可領配息</b>、期末每月可領配息、累積配息、持有市值與含息年化總報酬。</li>
+</ul>
+<div class="box warn"><b>一定要跟客戶說明：配息不等於報酬。</b>淨值下跌時，部分配息可能來自本金。比較標的時要看「含息總報酬」，不要只看配息率。試算未計入美元匯率變動。</div>
+
+<h2 id="flow">建議會談流程</h2>
+<ol class="flow">
+<li><b>先聊夢想，再談數字。</b>打開首頁人生曲線圖，問客戶幾歲想退休、想過什麼樣的生活。</li>
+<li><b>一起填食衣住行育樂。</b>讓客戶自己估餐費、房租、換車、出國次數，完成人生需求總覽。</li>
+<li><b>看曲線找缺口。</b>資產能撐到幾歲？缺多少？每月需要投入多少？</li>
+<li><b>說明通膨。</b>切到「通膨怎麼來」，用便當和生活費的例子說明錢會變薄。</li>
+<li><b>找工具補缺口。</b>用「ETF／基金比較」看不同標的的長期報酬；需要每月現金流的客戶，用「月配息」試算可領金額。</li>
+<li><b>回到人生曲線確認。</b>把選定的報酬率與每月投入填回首頁，確認曲線能撐到規劃年齡。</li>
+</ol>
+
+<h2 id="rules">使用注意事項</h2>
+<div class="box warn"><ul>
+<li>所有結果都是<b>試算假設，非保證收益</b>；實際報酬每年都會波動，也可能虧損。</li>
+<li>基金績效為發行公司公布的過去績效，<b>不代表未來績效</b>。</li>
+<li>試算未扣除手續費、管理費、稅負（含二代健保補充保費），也未計入匯率變動。</li>
+<li>網站只做試算與說明，不作為推介特定商品的依據；商品建議請依公司規範辦理。</li>
+<li>請勿在網站輸入客戶姓名、身分證字號等個人資料（網站不需要，也不會儲存）。</li>
+</ul></div>
+
+<h2 id="faq">常見問題</h2>
+<h3>看到的資料不是最新的？</h3>
+<p>重新整理頁面；手機從主畫面開啟時，可先關掉再重開。</p>
+<h3>數字欄位出現紅字提示？</h3>
+<p>代表輸入超出範圍，例如退休年齡大於規劃年齡、年數不是整數，依提示修正即可。</p>
+<h3>曲線變成紅色？</h3>
+<p>代表資產在那個年紀用完，紅色部分是資金缺口。可以提高每月投入、延後退休，或調整夢想的金額與時間。</p>
+<h3>可以存下客戶的試算結果嗎？</h3>
+<p>目前不會儲存，重新整理就清空。需要留存時，請用截圖。</p>
+<h3>發現問題或有建議？</h3>
+<p>請記下是哪一頁、輸入了哪些數字、看到什麼結果，回報給負責人。</p>
+
+<footer>夢想實現計畫｜團隊內部使用說明　2026/10/16</footer>
+</main>
+</body></html>

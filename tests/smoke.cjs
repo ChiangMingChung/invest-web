@@ -142,7 +142,7 @@ assert.ok(Math.abs(lifeRun({...base,rate1:6}).retireValue-growthReference(10000,
 assert.equal(run('neededMonthly('+JSON.stringify({...base,monthly:0,expense:10000})+')'),8400);
 assert.equal(run('ageText(78.25)'),'78 歲 3 個月');
 assert.equal(run('ageText(80)'),'80 歲');
-const life={'l-age':'35','l-retire':'65','l-end':'90','l-inflation':'2','l-assets':'1000000','l-monthly':'20000','l-rate1':'6','l-income':'20000','l-rate2':'3','l-food':'600','l-living':'15000','l-rent':'15000','l-house-price':'15000000','l-house-age':'40','l-car1':'1000000','l-car2':'600000','l-car-years':'10','l-edu':'2000000','l-edu-age':'45','l-eu':'1','l-eu-cost':'100000','l-asia':'1','l-asia-cost':'45000','l-travel-end':'80'};
+const life={'l-salary':'60000','l-age':'35','l-retire':'65','l-end':'90','l-inflation':'2','l-assets':'1000000','l-monthly':'20000','l-rate1':'6','l-income':'20000','l-rate2':'3','l-food':'600','l-living':'15000','l-rent':'15000','l-house-price':'15000000','l-house-age':'40','l-car1':'1000000','l-car2':'600000','l-car-years':'10','l-edu':'2000000','l-edu-age':'45','l-eu':'1','l-eu-cost':'100000','l-asia':'1','l-asia-cost':'45000','l-travel-end':'80'};
 elements['l-house'].value='rent';
 for(const [k,v] of Object.entries(life))elements[k].value=v;
 run('renderLife()');
@@ -183,6 +183,18 @@ const nominal=run('lifeNeeds('+JSON.stringify(fullInf)+')').reduce((a,r)=>a+r[3]
 assert.ok(Math.abs(nominal-simInf.totalSpend)<1e-3);
 assert.ok(Math.abs(fullInf.assets+simInf.totalPut+simInf.totalGain-simInf.totalSpend-simInf.values[55])<1e-3);
 assert.equal(simInf.totalPut,20000*12*30);
+// 收支比較：主動收入到退休為止，退休後支出平均就是每月所需被動收入（今日幣值）
+const cf=run('lifeCashflow('+JSON.stringify({...full,salary:60000,retire:45,end:85,house:'own',car1:0,edu:0,eu:0,asia:0})+')');
+assert.equal(cf.income.length,50);
+assert.equal(cf.income[9],720000);
+assert.equal(cf.income[10],0);
+assert.equal(cf.Y,40);
+assert.equal(cf.passive,600*30+15000);
+assert.equal(cf.preIncome,60000*12*10);
+assert.equal(cf.surplus,60000-(600*30+15000));
+const cf2=run('lifeCashflow('+JSON.stringify({...full,salary:60000,retire:45,end:85})+')');
+assert.ok(Math.abs(cf2.retExpense-cf2.expense.slice(10).reduce((a,b)=>a+b,0))<1e-6);
+assert.ok(cf2.oneTime>0&&Math.abs(cf2.passive*40*12-cf2.retExpense)<1e-6);
 // inflation page
 assert.ok(Math.abs(run('inflationAt(100,2,30).future')-100*Math.pow(1.02,30))<1e-9);
 assert.ok(Math.abs(run('inflationAt(100,2,30).power')-100/Math.pow(1.02,30))<1e-9);

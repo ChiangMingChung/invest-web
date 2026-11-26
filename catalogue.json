@@ -7,16 +7,16 @@
   "tags": "台灣50 市值 台股",
   "url": "https://www.yuantaetfs.com/product/domestic?lang=zh-tw",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/31",
    "source": "元大投信基金月報（理柏資訊、投信投顧公會、元大投信，原幣計算）",
    "url": "https://www.yuantafunds.com/fund/download/1066%E5%85%83%E5%A4%A7%E5%8F%B0%E7%81%A3%E5%8D%93%E8%B6%8A50%E5%9F%BA%E9%87%91%E6%9C%88%E5%A0%B1.pdf",
    "inception": "2003/06/25",
    "returns": {
-    "1": 98.71,
-    "2": 155.8,
-    "3": 290.26,
-    "5": 277.73,
-    "since": 2404.6
+    "1": 66.67,
+    "2": 127.52,
+    "3": 269.52,
+    "5": 254.56,
+    "since": 2248.26
    }
   }
  },
@@ -52,16 +52,16 @@
   "tags": "高股息 台股",
   "url": "https://www.yuantaetfs.com/product/domestic?lang=zh-tw",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/31",
    "source": "元大投信基金月報（理柏資訊、投信投顧公會、元大投信，原幣計算）",
    "url": "https://www.yuantafunds.com/fund/download/1084%E5%85%83%E5%A4%A7%E5%8F%B0%E7%81%A3%E9%AB%98%E8%82%A1%E6%81%AF%E5%9F%BA%E9%87%91%E6%9C%88%E5%A0%B1.pdf",
    "inception": "2007/12/13",
    "returns": {
-    "1": 69.38,
-    "2": 83.18,
-    "3": 121.6,
-    "5": 181.48,
-    "since": 589.87
+    "1": 65.12,
+    "2": 85.75,
+    "3": 132.98,
+    "5": 180.54,
+    "since": 598.97
    }
   }
  },
@@ -134,14 +134,14 @@
   "tags": "安聯 Allianz 台股 科技 境內 累積",
   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-technology-fund",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-technology-fund",
    "returns": {
-    "1": 187.78,
-    "2": 288.57,
-    "3": 416.32,
-    "since": 8005.2
+    "1": 119.81,
+    "2": 229.94,
+    "3": 381.68,
+    "since": 7102.6
    },
    "inception": "2001/04/03"
   }
@@ -154,14 +154,14 @@
   "tags": "安聯 Allianz 台股 大壩 境內 累積",
   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-fund-a-twd",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-fund-a-twd",
    "returns": {
-    "1": 159.1,
-    "2": 245.35,
-    "3": 339.68,
-    "since": 3206.4
+    "1": 103.41,
+    "2": 195.81,
+    "3": 325.29,
+    "since": 2856.6
    },
    "inception": "2000/04/10"
   }
@@ -174,14 +174,14 @@
   "tags": "安聯 Allianz 台股 智慧 境內 累積",
   "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-intelligence-trends-fund",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-taiwan-intelligence-trends-fund",
    "returns": {
-    "1": 138.7,
-    "2": 212.46,
-    "3": 313.86,
-    "since": 3973.6
+    "1": 79.78,
+    "2": 156.97,
+    "3": 279.94,
+    "since": 3418.2
    },
    "inception": "2008/04/24"
   }
@@ -194,15 +194,15 @@
   "tags": "統一 台股 科技 境內 累積",
   "url": "https://www.ezmoney.com.tw/funds/info/36",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "統一投信官網（Morningstar、投信投顧公會）",
    "url": "https://www.ezmoney.com.tw/Funds/ComparePrint",
    "returns": {
-    "1": 140.83,
-    "2": 228.94,
-    "3": 313.9,
-    "5": 503.34,
-    "since": 7901.5
+    "1": 80.19,
+    "2": 175.6,
+    "3": 291.44,
+    "5": 369.28,
+    "since": 6852.4
    },
    "inception": "1998/08/11"
   }
@@ -215,15 +215,15 @@
   "tags": "統一 台股 中小 境內 累積",
   "url": "https://www.ezmoney.com.tw/funds/info/30",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "統一投信官網（Morningstar、投信投顧公會）",
    "url": "https://www.ezmoney.com.tw/Funds/ComparePrint",
    "returns": {
-    "1": 142.58,
-    "2": 213.01,
-    "3": 264.03,
-    "5": 411.67,
-    "since": 8993.97
+    "1": 85.18,
+    "2": 171.64,
+    "3": 260.62,
+    "5": 309.55,
+    "since": 8006.97
    },
    "inception": "1994/11/01"
   }
@@ -292,21 +292,21 @@
   "tags": "Allianz 月配息 股債 非投資等級 配息來源可能為本金",
   "kind": "基金",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-am-usd?nav=performance",
    "inception": "2012/10/16",
    "returns": {
-    "1": 7.06,
-    "2": 17.83,
-    "3": 38.2,
-    "since": 179.3
+    "1": 3.36,
+    "2": 16.45,
+    "3": 40.21,
+    "since": 175.33
    },
    "dividend": {
-    "exDate": "2026/09/15",
-    "amount": 0.055,
+    "exDate": "2026/11/16",
+    "amount": 0.06,
     "currency": "美元",
-    "rate": 0.65,
+    "rate": 0.74,
     "frequency": "每月",
     "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-am-usd?nav=dividend"
    }
@@ -320,21 +320,21 @@
   "tags": "Allianz 月配息 非投資等級 配息來源可能為本金",
   "kind": "基金",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-amg7-usd?nav=performance",
    "inception": "2020/02/03",
    "returns": {
-    "1": 7.06,
-    "2": 17.83,
-    "3": 37.86,
-    "since": 61.7
+    "1": 3.36,
+    "2": 16.46,
+    "3": 39.95,
+    "since": 59.4
    },
    "dividend": {
-    "exDate": "2026/09/15",
-    "amount": 0.06796,
+    "exDate": "2026/11/16",
+    "amount": 0.07248,
     "currency": "美元",
-    "rate": 0.79,
+    "rate": 0.88,
     "frequency": "每月",
     "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-income-and-growth-amg7-usd?nav=dividend"
    }
@@ -348,21 +348,21 @@
   "tags": "Allianz 人工智慧 月配息 非投資等級 配息來源可能為本金",
   "kind": "基金",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-ai-income-am-usd?nav=performance",
    "inception": "2016/04/05",
    "returns": {
-    "1": 22.98,
-    "2": 46.63,
-    "3": 87.04,
-    "since": 312.31
+    "1": 10.66,
+    "2": 36.74,
+    "3": 81.9,
+    "since": 286.07
    },
    "dividend": {
-    "exDate": "2026/09/15",
+    "exDate": "2026/11/16",
     "amount": 0.14619,
     "currency": "美元",
-    "rate": 0.57,
+    "rate": 0.62,
     "frequency": "每月",
     "url": "https://tw.allianzgi.com/zh-tw/products-solutions/luxemberg/allianz-ai-income-am-usd?nav=dividend"
    }
@@ -376,15 +376,15 @@
   "tags": "Allianz 境內 累積 股債 非投資等級",
   "kind": "基金",
   "perf": {
-   "asOf": "2026/09/30",
+   "asOf": "2026/10/30",
    "source": "安聯投信官網（Lipper，含息、原幣計算）",
    "url": "https://tw.allianzgi.com/zh-tw/products-solutions/taiwan-onshore/allianz-global-investors-income-and-growth-fund-a-usd?nav=performance",
    "inception": "2020/01/03",
    "returns": {
-    "1": 8.56,
-    "2": 18.89,
-    "3": 38.64,
-    "since": 59.08
+    "1": 4.84,
+    "2": 16.5,
+    "3": 39.41,
+    "since": 56.47
    }
   }
  }

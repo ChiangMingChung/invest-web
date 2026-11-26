@@ -89,17 +89,20 @@ elements['g-years'].value=''; run('renderGrowth()');
 assert.equal(elements['g-value'].textContent,'—');
 assert.ok(elements['g-error'].textContent.length>0);
 const ig=run('searchCatalogue("LU0820561818")[0]');
-assert.equal(ig.perf.returns.since,179.3);
+const igFile=JSON.parse(require('fs').readFileSync(require('path').join(__dirname,'..','catalogue.json'),'utf8')).find(c=>c.code==='LU0820561818');
+assert.equal(ig.perf.returns.since,igFile.perf.returns.since);
+const igDiv=igFile.perf.dividend,igAmt=String(igDiv.amount)+' 美元';
 assert.ok(Math.abs(run('perfLongTerm(searchCatalogue("LU0820561818")[0])').annual-expectLT('LU0820561818').annual)<1e-9);
-assert.ok(run('perfDetail(0,searchCatalogue("LU0820561818")[0])').includes('0.055 美元'));
+assert.ok(run('perfDetail(0,searchCatalogue("LU0820561818")[0])').includes(igAmt));
 assert.equal(run('perfDividend(searchCatalogue("TW000T3635H2")[0])'),'');
 // dividend presets (Allianz Income & Growth AM as default)
 assert.equal(elements['g-preset'].value,'LU0820561818');
-assert.equal(+elements['g-yield'].value,7.8);
-assert.ok(Math.abs(+elements['g-nav'].value+0.41)<0.011);
+assert.equal(+elements['g-yield'].value,+(igDiv.rate*12).toFixed(2));
+const igLT=expectLT('LU0820561818').annual;
+assert.ok(Math.abs(+elements['g-nav'].value-(((1+igLT/100)/Math.pow(1+igDiv.rate/100,12)-1)*100))<0.011);
 const presetSim=run('dividendSim(1000000,20,'+elements['g-nav'].value+','+elements['g-yield'].value+',false)');
 assert.ok(Math.abs(presetSim.totalReturn-run('perfLongTerm(searchCatalogue("LU0820561818")[0]).annual'))<0.02);
-assert.ok(elements['g-preset-note'].innerHTML.includes('0.055 美元'));
+assert.ok(elements['g-preset-note'].innerHTML.includes(igAmt));
 assert.equal(run('dividendPresets().length'),3);
 // monthly dividend mode (lump sum)
 const sim=(p,y,nav,yp,re)=>run('dividendSim('+[p,y,nav,yp,re].join(',')+')');
@@ -173,6 +176,13 @@ assert.equal(run('lifeMonthlyNeed('+JSON.stringify({...full,house:'own'})+')'),6
 const simFull=run('lifeSim('+JSON.stringify(full)+')');
 const total=run('lifeNeeds('+JSON.stringify(full)+')').reduce((a,r)=>a+r[2],0);
 assert.ok(Math.abs(-simFull.values[55]-total)<1e-3);
+// 含通膨合計與對帳：目前資產＋投入＋收益－支出＝期末資產
+const fullInf={...full,inflation:2,assets:1000000,monthly:20000,rate1:6,rate2:3,dreams:[{age:60,name:'x',amount:500000}]};
+const simInf=run('lifeSim('+JSON.stringify(fullInf)+')');
+const nominal=run('lifeNeeds('+JSON.stringify(fullInf)+')').reduce((a,r)=>a+r[3],0);
+assert.ok(Math.abs(nominal-simInf.totalSpend)<1e-3);
+assert.ok(Math.abs(fullInf.assets+simInf.totalPut+simInf.totalGain-simInf.totalSpend-simInf.values[55])<1e-3);
+assert.equal(simInf.totalPut,20000*12*30);
 // inflation page
 assert.ok(Math.abs(run('inflationAt(100,2,30).future')-100*Math.pow(1.02,30))<1e-9);
 assert.ok(Math.abs(run('inflationAt(100,2,30).power')-100/Math.pow(1.02,30))<1e-9);
